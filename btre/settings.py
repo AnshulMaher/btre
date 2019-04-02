@@ -156,3 +156,8 @@ EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = True
 
 LOGIN_URL = 'accounts:login'
+
+try:
+    from .local_settings import *
+except ImportError:
+    pass
